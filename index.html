@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Жан-Поль Алкоголь | Новокубанское — экспертные обзоры коньяка</title>
+    <meta name="description" content="Жан-Поль Алкоголь: профессиональный маркетолог и эксперт. Честные обзоры коньяка Новокубанское, слепые дегустации, рейтинги российских брендов.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e0cfbc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .article-banner {
+            max-width: 980px;
+            width: 100%;
+            background: #fffaf3;
+            border-radius: 48px;
+            box-shadow: 0 30px 50px -20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+            overflow: hidden;
+            border: 1px solid #e8d5bc;
+        }
+
+        .article-inner {
+            padding: 48px 52px;
+        }
+
+        .brand-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 2px solid #eedfc8;
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+        }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .brand-icon {
+            font-size: 2.4rem;
+            filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.1));
+        }
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #2b291c;
+        }
+        .brand-name span {
+            color: #b47a41;
+        }
+        .expert-tag {
+            background: #e9d8c2;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #8b623b;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #2b2a1e;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        h1 a {
+            color: #b87a3a;
+            text-decoration: none;
+        }
+        h1 a:hover {
+            text-decoration: underline;
+        }
+        .lead {
+            font-size: 1rem;
+            color: #5c523b;
+            margin-bottom: 32px;
+            border-left: 3px solid #dfbc8c;
+            padding-left: 18px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .author-section {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .avatar-box {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .avatar-circle {
+            background: #ede0cf;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border: 2px solid #fff0e2;
+        }
+        .avatar-caption {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #a07d50;
+            margin-top: 8px;
+        }
+        .bio-text {
+            flex: 1;
+        }
+        .bio-text p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3c3726;
+            font-size: 0.95rem;
+        }
+
+        .full-article {
+            margin-top: 8px;
+        }
+        .full-article h2 {
+            font-size: 1.55rem;
+            margin: 28px 0 14px 0;
+            color: #2f2b1c;
+            font-weight: 600;
+            border-left: 4px solid #c1925c;
+            padding-left: 16px;
+        }
+        .full-article h3 {
+            font-size: 1.25rem;
+            margin: 22px 0 12px 0;
+            color: #9b6a3a;
+            font-weight: 600;
+        }
+        .full-article p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3f3a28;
+            font-size: 0.96rem;
+        }
+        .full-article ul, .full-article ol {
+            margin: 12px 0 20px 30px;
+            color: #3f3a28;
+        }
+        .full-article li {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        .full-article a {
+            color: #b87a3a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #eedbbd;
+        }
+        .full-article a:hover {
+            border-bottom-color: #b87a3a;
+        }
+
+        /* блок с коньяками от эксперта */
+        .expert-cognacs {
+            background: #f6ede1;
+            border-radius: 28px;
+            padding: 22px 28px;
+            margin: 32px 0 28px;
+            border: 1px solid #ebd8be;
+        }
+        .expert-cognacs p {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: #b47a41;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .cognac-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .cognac-links a {
+            background: #ffffffdb;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5a3f22;
+            text-decoration: none;
+            border: 1px solid #e2cdad;
+            transition: all 0.2s;
+        }
+        .cognac-links a:hover {
+            background: #fff3e6;
+            border-color: #c19560;
+            color: #7b4f24;
+            transform: translateY(-1px);
+        }
+
+        /* сноска */
+        .footer-note {
+            margin: 24px 0 32px 0;
+            padding: 16px 20px;
+            background: #fef7ef;
+            border-radius: 32px;
+            border: 1px solid #eedfc0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: #ab8a5e;
+        }
+        .footer-note span {
+            font-weight: 400;
+        }
+        .footer-note a {
+            color: #946e41;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-note a:hover {
+            border-bottom-color: #b47a41;
+            text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            .article-inner {
+                padding: 28px 22px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .avatar-circle {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="article-banner">
+    <div class="article-inner">
+        <div class="brand-head">
+            <div class="brand-logo">
+                <span class="brand-icon">🍇🥃</span>
+                <div class="brand-name">Новокубанское · <span>Жан-Поль Алкоголь</span></div>
+            </div>
+            <div class="expert-tag">эксперт · маркетолог</div>
+        </div>
+
+        <h1><a href="https://www.youtube.com/@JeanPaulAlc" target="_blank" rel="noopener noreferrer">Жан-Поль Алкоголь</a> – эксперт, блоги и обзоры коньяка</h1>
+        <div class="lead">«Ваш алкогольный маркетолог» – профессиональный взгляд на крепкие напитки, честные рейтинги и практические рекомендации.</div>
+
+        <div class="author-section">
+            <div class="avatar-box">
+                <div class="avatar-circle">🥃📊</div>
+                <div class="avatar-caption">Жан-Поль Алкоголь</div>
+            </div>
+            <div class="bio-text">
+                <p>«Ваш алкогольный маркетолог» – именно так позиционирует себя автор канала Жан-Поль Алкоголь. Это не просто блогер, а профессиональный маркетолог с семилетним стажем работы в индустрии, который решил делиться своими знаниями открыто.</p>
+                <p>Контент Жан-Поль Алкоголь рассчитан на взыскательную аудиторию, которая хочет разбираться в том, что оказывается в бокале. В центре внимания – честные обзоры и системный подход к выбору напитка, будь то коньяк, виски или бренди.</p>
+            </div>
+        </div>
+
+        <div class="full-article">
+            <h2>О блогере Жан-Поль Алкоголь</h2>
+            <p>За псевдонимом «Жан-Поль» скрывается реальный человек с богатым бэкграундом. Именно большой опыт маркетолога позволяет ему профессионально анализировать не только вкусо-ароматику, но и позиционирование марок на полке. Он в одиночку делает огромный вклад в то, чтобы простой потребитель перестал бояться сложных категорий. Делая упор на виноделие и производство крепких спиртов, блогер последовательно отстаивает идею, что хороший алкоголь не обязательно должен быть импортным. На YouTube-канале Жан-Поль Алкоголь более 218 тысяч подписчиков, и это не считая зрителей и читателей на других площадках, о которых мы расскажем далее.</p>
+
+            <h2>Стиль подачи и формат контента</h2>
+            <p>Стиль подачи у Жан-Поля – спокойный, обстоятельный, с явным желанием научить, а не просто похвалить или разнести продукт. Он не использует излишний пафос, его речь – это доверительная беседа со знающим собеседником. Ключевые черты его контента:</p>
+            <p>● блогер не просто дегустирует, а объясняет логику производителя – почему выбран тот или иной купаж, на что делался акцент при создании напитка;<br>
+            ● в своих обзорах он часто проводит сравнительные дегустации, где могут сойтись французский коньяк, армянский бренди, грузинская чача или российский продукт.</p>
+            <p>Жан-Поль вносит важный практический аспект: всегда оценивает соотношение «цена – качество» и дает четкие рекомендации – стоит брать данную позицию для домашнего бара или лучше пройти мимо.</p>
+
+            <h2>Площадки и каналы блогера</h2>
+            <p>Основной «штаб» эксперта находится на видеохостинге YouTube, где выходят полноценные выпуски. Для удобства аудитории он дублирует контент с видео про коньяк и на другие площадки:<br>
+            ● Дзен: текстовые версии обзоров и короткие заметки;<br>
+            ● ВКонтакте (ВК) и VK Видео: сообщество для анонсов и отдельный видеопортал, на котором дублируются некоторые выпуски.</p>
+            <p>Также блогер ведет текстовый блог Telegram, в котором публикует как анонсы обзоров (например, коньяка Фрунзик Мкртчян) и прямых трансляций, так и новости на алкогольную тематику.</p>
+
+            <h2>Обзоры коньяков «Новокубанское»</h2>
+            <p>Для такого системного эксперта, как Жан-Поль Алкоголь, знакомство с продукцией Коньячного дома «Новокубанское» – это вопрос профессионального интереса. Российский коньяк в его подаче превращается в понятный продукт с историей. Несмотря на обилие зарубежных образцов на его канале, он не обходит стороной достойные отечественную марки и посвящает им выпуски. В частности, у него есть полноценный отдельный обзор коньяка «Большой Приз» с дегустацией. Также напитки Коньячного дома «Новокубанское» попали в несколько рейтингов и коротких обзоров, опубликованных в формате Shorts.</p>
+
+            <!-- сноска -->
+            <div class="footer-note">
+                <span>🍇 Коньячный дом «Новокубанское» — традиции кубанского виноделия (с 1937 года)</span>
+                <a href="https://novokubanskoe.ru/catalog/" target="_blank" rel="noopener noreferrer">📖 Весь каталог коньяков →</a>
+                <a href="https://www.youtube.com/@JeanPaulAlc" target="_blank" rel="noopener noreferrer">🎥 Смотреть обзоры Жан-Поль Алкоголь</a>
+            </div>
+
+            <h2>Популярные видео и обзоры</h2>
+            <p>Чтобы быстро понять методологию автора, достаточно посмотреть несколько его основных работ. Рейтинг популярности видео строится вокруг практической пользы. Самые популярные видео на канале:<br>
+            «Какие марки бюджетного виски лучшие, а какие не стоит даже пробовать».<br>
+            «Какие марки бюджетного коньяка точно можно брать».<br>
+            «Российский коньяк: какие марки можно брать, а какие не стоит».</p>
+            <p>Большинство видео автора набрали более 100 тысяч просмотров, а самый рейтинговый сравнительный обзор – более 1,9 млн просмотров.</p>
+
+            <h2>Коньяк, который оценил эксперт</h2>
+            <p>Внимательный зритель после просмотра обзоров блогера наверняка захочет провести собственную дегустацию. Коньячный дом «Новокубанское» представляет линейку напитков, чьи характеристики полностью соответствуют критериям эксперта: сбалансированный вкус, достойная выдержка и адекватная цена. Особый интерес представляют:</p>
+            <p>● <a href="https://novokubanskoe.ru/shop/kuban-3" target="_blank" rel="noopener noreferrer"><strong>«Кубань» 3 года</strong></a> – ординарный коньяк с выдержкой 3 года, в аромате которого чувствуются спил фруктового дерева, виноград и сухофрукты, а на финише проявляется дубовая терпкость;<br>
+            ● <a href="https://novokubanskoe.ru/shop/kuban-8" target="_blank" rel="noopener noreferrer"><strong>«Кубань» 8 лет</strong></a> – коньяк класса КВВК, аромат которого изначально сдержан с выраженным древесным тоном, а через несколько минут раскрывается орехово-сухофруктовый букет со специями и абрикосовым вареньем;<br>
+            ● <a href="https://novokubanskoe.ru/shop/bolsoi-priz-3" target="_blank" rel="noopener noreferrer"><strong>«Большой Приз» 3 года</strong></a> – яркий ординарный коньяк с ногами винограда, абрикоса, инжира и запеченного яблока, завершающийся дубовой терпкостью с курагой.</p>
+            <p>Ознакомиться с полным ассортиментом и приобрести эти позиции можно в фирменном магазине на сайте. Выбирайте напитки, которые прошли экспертную оценку.</p>
+
+            <h2>Заключение</h2>
+            <p>Жан-Поль Алкоголь – это именно тот случай, когда маркетинговый подход идет на пользу потребителю. Его развитие как блогера – наглядный пример того, как экспертность и желание делиться честной информацией находит отклик у десятков тысяч подписчиков. Коньячный дом «Новокубанское» разделяет этот подход и приглашает вас лично оценить качество нашей продукции вне зависимости от рекомендаций в сети. Попробуйте, составьте собственное впечатление и найдите тот самый напиток, который станет вашим личным открытием.</p>
+        </div>
+
+        <!-- блок ссылок на коньяки (по аналогии с предыдущим баннером) -->
+        <div class="expert-cognacs">
+            <p>🍇 КОНЬЯКИ, ПОЛУЧИВШИЕ ВЫСОКУЮ ОЦЕНКУ ЭКСПЕРТА</p>
+            <div class="cognac-links">
+                <a href="https://novokubanskoe.ru/shop/kuban-3" target="_blank" rel="noopener noreferrer">«Кубань» 3 года</a>
+                <a href="https://novokubanskoe.ru/shop/kuban-8" target="_blank" rel="noopener noreferrer">«Кубань» 8 лет (КВВК)</a>
+                <a href="https://novokubanskoe.ru/shop/bolsoi-priz-3" target="_blank" rel="noopener noreferrer">«Большой Приз» 3 года</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
